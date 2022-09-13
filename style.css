@@ -1,0 +1,252 @@
+@font-face {
+    font-family: 'archivo';
+    src: url('fonts/Archivo/Archivo-Regular.ttf') format('truetype');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.text {
+    font-family: 'archivo';
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+/* NAVBAR-START */
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 20px 72px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(60px);            
+    width: 100vw;
+    height: 4rem;
+    z-index: 999;
+}
+
+.nav .logo{
+    padding: 20px;
+    transition: all 0.3s ease-out;
+}
+
+.nav .logo:hover{
+    scale: 1.05;
+}
+
+.nav .logo img{
+    width: 3.2rem;
+    height: 3.2rem;
+}
+
+
+.nav .menu-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav .menu-nav .menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 27rem;
+    margin-left: 8.5rem;
+}
+
+.nav .menu-nav .menu li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease-out;
+}
+
+.nav .menu-nav .menu li:hover{
+    scale: 1.05;
+}
+
+.nav .menu-nav .menu li img{
+    height: 1.3rem;
+    width: 1.3rem;
+}
+
+.nav .menu-nav .menu li a{
+    color: #fff;
+    font-size: 13px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+    padding-left: 5px;
+}
+
+.nav .membro-nav{
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    padding: 5px 30px;
+    margin-right: 20px;
+    border-radius: 100px;
+    background: rgba(97, 0, 255, 0.5);
+    border: 2px solid #FFFFFF;
+    box-shadow: 0px 13px 24px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(50px);
+    transition: all 0.3s ease-out;
+}
+
+.nav .membro-nav:hover{
+    scale: 1.05;
+}
+
+.nav .membro-nav a{
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+    color: #fff;
+}
+
+/* NAVBAR-END */
+
+/* HOME-START */
+
+.home{
+    display: flex;
+    background: linear-gradient(180deg, #9E00FF 0%, #1400FF 100%);
+    width: 100vw;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.home .content{
+    position: relative;
+    padding-top: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.home .content .pics{
+    display: flex;
+    justify-content:center;
+    align-items: flex-start;
+}
+
+.home .content .pics .person-left{
+    position: relative;
+    left: 7rem;
+    top: 10rem;
+    z-index: 1;
+}
+
+.home .content .pics .cel-left{
+    z-index: 2;
+}
+
+.home .content .pics .cel-center{
+    position: relative;
+    top: -20px;
+    box-shadow: 0px 70.4652rem 72.7022rem rgba(0, 0, 0, 0.25);
+}
+
+.home .content .pics .cel-right{
+    z-index: 2;
+}
+
+.home .content .pics .person-right{
+    position: relative;
+    right: 9.9rem;
+    top: 4rem;
+    z-index: 1;
+}
+
+.home .content .pics .person-left img,
+.home .content .pics .cel-left img,
+.home .content .pics .cel-center img,
+.home .content .pics .cel-right img,
+.home .content .pics .person-right img{
+    width: 100%;
+}
+
+@media (max-width:1024px){
+
+    .nav .menu-nav .menu li a{
+        color: #fff;
+        font-size: 11px;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+    .nav .membro-nav a{
+        font-weight: 500;
+        font-size: 12px;
+        color: #fff;
+    }
+
+    .home .content{
+        padding-top: 4rem;
+    }
+
+    .home .content .pics .person-left{
+        left: 5.4rem;
+        top: 8rem;
+    }
+
+    .home .content .pics .person-right{
+        right: 7.3rem;
+        top: 4rem;
+    }
+}
+
+@media (max-width:860px){
+
+    .nav .menu-nav .menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .nav .menu-nav .menu li{
+        margin-left: 10px;
+    }
+
+    .nav .membro-nav{
+        margin-right: 5px;
+        padding: 5px 10px;
+    }
+    .nav .membro-nav a{
+        font-weight: 500;
+        font-size: 12px;
+        color: #fff;
+    }
+
+    .home .content{
+        padding-top: 5rem;
+    }
+
+    .home .content .pics .person-left{
+        left: 4rem;
+        top: 6rem;
+    }
+
+    .home .content .pics .person-right{
+        right: 5.5rem;
+        top: 2rem;
+    }
+}
